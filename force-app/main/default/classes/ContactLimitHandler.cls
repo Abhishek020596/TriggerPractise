@@ -8,7 +8,7 @@ public class ContactLimitHandler {
         }
         Integer contactListCount = [SELECT COUNT() FROM CONTACT WHERE accountID IN: IdSet];
         
-        if(contactListCount > 3) {
+        if(contactListCount > 3) { 
             for(contact cop : conList) {
                 cop.addError('cannot have more than 3 contacts per account');
             }

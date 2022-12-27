@@ -7,7 +7,7 @@ public class ContactMetaDataHandler {
         for(ContactMetaData__mdt metaData : [SELECT Phone__c,Name__c,Email__c FROM ContactMetaData__mdt]){
             if(metaData.Name__c !=null){
                 nameMap.put(metaData.Phone__c,metaData.Name__c);
-            }
+            } 
             if(metaData.Email__c !=null){
                 emailMap.put(metaData.Phone__c,metaData.Email__c);
             }
